@@ -18,13 +18,21 @@ export default function App() {
   return (
     <View style={styles.container}>
 
+      <View style={styles.border}>
+        <Text>Aula 1: Modulo 2</Text>
+
         {areaShow === true &&
             <View style={styles.area}>
               <Text style={styles.areaText}>Área Secreta</Text>
             </View>        
         }
-        
+
         <Button title="Apareça / Desapareça" onPress={handleClick}/>
+
+      </View>
+
+      <View style={styles.border}>
+        <Text>Aula 2: Modulo 2</Text>
 
         <TextInput style={styles.input}
           value={campo}
@@ -33,6 +41,17 @@ export default function App() {
         />
         <Button title='O que foi digitado?' onPress={mostrar} />
         <Text>Você digitou: {campo} </Text>
+
+      </View>
+
+      <View style={styles.border}>
+      <Text>Aula 2: Modulo 2</Text>
+        
+      </View>
+
+
+
+
 
       <StatusBar style="auto" />
     </View>
@@ -66,5 +85,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#DDD',
     borderRadius: 5,
     margin: 20
+  },
+  border: {
+    borderWidth: 1,
+    borderRadius: 5,
+    width: '90%',
+    alignItems: 'center',
+    padding: 10
   }
 });
